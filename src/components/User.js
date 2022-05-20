@@ -6,7 +6,8 @@ function User({ people }) {
    const person = people.map(user => {
         return (
             <>
-                <div key={user.name}>
+                <div key={user.username}>
+                    <p>{user.name}</p>
                     <p>{user.username}</p>
                     <p>{user.password}</p>
                 </div>
