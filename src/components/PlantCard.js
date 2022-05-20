@@ -1,10 +1,14 @@
 import React from "react";
+import Users from "./User"
 
-function PlantCard() {
+function PlantCard({ name }) {
+
+    console.log(name)
 
     return (
-        <h1>Hello</h1>
+        <p>{name}</p>
     )
+
 }
 
 

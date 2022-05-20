@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Users from "./User"
+import PlantPage from "./PlantPage";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     return (
         <>
             <h1>this is in the App</h1>
-            <Users people={users}/>
+            <PlantPage users={users}/>
         </>
     )
 }
