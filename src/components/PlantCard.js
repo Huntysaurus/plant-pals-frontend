@@ -6,7 +6,10 @@ function PlantCard({ name }) {
     console.log(name)
 
     return (
-        <p>{name}</p>
+        <>
+            <p>{name}</p>
+            <button>delete</button>
+        </>
     )
 
 }

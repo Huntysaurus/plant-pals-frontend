@@ -8,8 +8,8 @@ function User({ people }) {
             <>
                 <div key={user.id}>
                     <p>{user.name}</p>
+                    <button>delete</button>
                 </div>
-                <br></br>
             </>
         )
     })
