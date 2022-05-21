@@ -1,7 +1,9 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantPage({ users }) {
+function PlantPage({ plants }) {
+
+    console.log(plants)
 
     return (
         <>
@@ -11,12 +13,12 @@ function PlantPage({ users }) {
                 <button>only show dead</button>
                 <button>sort by flowering</button>   
             </h2>
-            
+
             <div>
-                {users.map((user) => {
+                {plants.map((plant) => {
                     return (
-                        <ul key={user.id}>
-                            <PlantCard name={user.name}/>
+                        <ul key={plant.id}>
+                            <PlantCard plantName={plant.name}/>
                         </ul>
                     )
                 })}

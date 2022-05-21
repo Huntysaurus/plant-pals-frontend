@@ -1,13 +1,12 @@
 import React from "react";
-import Users from "./User"
 
-function PlantCard({ name }) {
+function PlantCard({ plantName }) {
 
-    console.log(name)
+    console.log(plantName)
 
     return (
         <>
-            <p>{name}</p>
+            <p>{plantName}</p>
             <button>delete</button>
             <button>update</button>
         </>

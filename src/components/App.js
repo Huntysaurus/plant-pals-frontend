@@ -4,18 +4,18 @@ import PlantPage from "./PlantPage";
 
 function App() {
 
-    const [users, setUsers] = useState([])
+    const [plantData, setPlantData] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:9292/users")
+        fetch("http://localhost:9292/plants")
         .then((r) => r.json())
-        .then(data => setUsers(data));
+        .then(data => setPlantData(data));
     }, [])
 
     return (
         <>
             <h1>this is in the App</h1>
-            <PlantPage users={users}/>
+            <PlantPage plants={plantData}/>
         </>
     )
 }
