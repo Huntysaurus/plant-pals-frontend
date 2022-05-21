@@ -9,6 +9,7 @@ function PlantCard({ name }) {
         <>
             <p>{name}</p>
             <button>delete</button>
+            <button>update</button>
         </>
     )
 
