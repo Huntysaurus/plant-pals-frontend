@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PlantPage from "./PlantPage";
+import PlantForm from "./PlantForm";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     return (
         <>
             <h1>this is in the App</h1>
+            <PlantForm/>
             <PlantPage plants={plantData}/>
         </>
     )
