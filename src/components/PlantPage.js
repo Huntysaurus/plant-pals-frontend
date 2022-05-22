@@ -10,7 +10,7 @@ function PlantPage({ plants }) {
             <h2>
                 <button>sort by difficulty</button>
                 <button>sort alphabetically</button>
-                <button>only show dead</button>
+                <button>only show alive</button>
                 <button>sort by flowering</button>   
             </h2>
 
