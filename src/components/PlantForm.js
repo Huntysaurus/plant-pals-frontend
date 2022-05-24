@@ -34,6 +34,14 @@ function PlantForm({ onAddPlant }) {
         .then((r)=> r.json())
         .then((newPlant) => {
             onAddPlant(newPlant)
+            setPlantName('')
+            setPlantImage('')
+            setPlantDescription('')
+            setPlantLight('direct sunlight')
+            setPlantCare('beginner friendly')
+            setPlantAge(0)
+            setPlantHealth('')
+            setPlantAlive('yes')
         })
     }
 
