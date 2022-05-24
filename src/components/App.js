@@ -13,10 +13,14 @@ function App() {
         .then(data => setPlantData(data));
     }, [])
 
+    function handleAddPlant(newPlantData) {
+        setPlantData([...plantData, newPlantData])
+    }
+
     return (
         <>
             <h1>this is in the App</h1>
-            <PlantForm/>
+            <PlantForm onAddPlant={handleAddPlant}/>
             <PlantPage plants={plantData}/>
         </>
     )
