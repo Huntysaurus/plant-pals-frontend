@@ -17,11 +17,17 @@ function App() {
         setPlantData([...plantData, newPlantData])
     }
 
+    function handleDeletePlant(id) {
+        const updatedPlants = plantData.filter(plant => plant.id !== id)
+        setPlantData(updatedPlants)
+    }
     return (
         <>
             <h1>this is in the App</h1>
             <PlantForm onAddPlant={handleAddPlant}/>
-            <PlantPage plants={plantData}/>
+            <PlantPage 
+                plants={plantData}
+                onDeletePlant={handleDeletePlant}/>
         </>
     )
 }

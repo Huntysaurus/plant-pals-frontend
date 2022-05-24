@@ -1,7 +1,10 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantPage({ plants }) {
+function PlantPage({
+    plants,
+    onDeletePlant
+}) {
 
     console.log(plants)
 
@@ -15,13 +18,22 @@ function PlantPage({ plants }) {
             </h2>
 
             <div>
-                {plants.map((plant) => {
-                    return (
-                        <ul key={plant.id}>
-                            <PlantCard plantName={plant.name}/>
-                        </ul>
-                    )
-                })}
+                <ul>
+                    {plants.map((plant) => {
+                        return (
+                            <PlantCard
+                            key={plant.id}
+                            id={plant.id}
+                            plantName={plant.name}
+                            plantImage={plant.image}
+                            plantDescription={plant.description}
+                            onDeletePlant={onDeletePlant}
+                            // onUpdatePlant={onUpdatePlant}
+                            />
+                        )
+                    }
+                    )}
+                </ul>
             </div>
         </>
     )
