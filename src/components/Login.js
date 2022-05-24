@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Login() {
+function Login({ onHandleLogin }) {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -11,13 +11,14 @@ function Login() {
         fetch("http://localhost:9292/users")
         .then((r) => r.json())
         .then(users => {
-            const found = users.find(user => {
-            (user.password === password && user.username === username)
+            console.log(users)
+            const foundUser = users.find((user) => {
+                    return user.password === password && user.username === username
             })
 
-            found ? console.log('found') : console.log('missing')
-            })
-        }
+            foundUser ? onHandleLogin(foundUser) : alert('Ick')
+        })
+    }
 
     return (
         <>
