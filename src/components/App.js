@@ -23,7 +23,7 @@ function App() {
     }
     return (
         <>
-            <h1>this is in the App</h1>
+            <h1>Plant Pals</h1>
             <PlantForm onAddPlant={handleAddPlant}/>
             <PlantPage 
                 plants={plantData}

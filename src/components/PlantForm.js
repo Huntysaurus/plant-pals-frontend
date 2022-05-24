@@ -47,7 +47,7 @@ function PlantForm({ onAddPlant }) {
 
     return (
         <>
-            <h2>Fill out info about plant</h2>
+            <h2>Add Your Plant to the List!</h2>
             <form onSubmit={handleSubmit}>
                 <label>
                     Plant Picture:
