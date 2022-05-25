@@ -6,8 +6,6 @@ function PlantPage({
     onDeletePlant
 }) {
 
-    console.log(plants)
-
     return (
         <>
             <h2>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function PlantForm({ onAddPlant }) {
+function PlantForm({ onAddPlant, user }) {
 
     const [plantName, setPlantName] = useState('')
     const [plantImage, setPlantImage] = useState('')
@@ -29,6 +29,7 @@ function PlantForm({ onAddPlant }) {
                 age: plantAge,
                 health: plantHealth,
                 still_alive: plantAlive,
+                user_id: user.id
             }),
         })
         .then((r)=> r.json())

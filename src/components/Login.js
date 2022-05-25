@@ -6,7 +6,6 @@ function Login({ onHandleLogin }) {
     const [password, setPassword] = useState('')
 
     function handleLogin(e){
-        console.log('hello')
         e.preventDefault()
         fetch("http://localhost:9292/users")
         .then((r) => r.json())
@@ -16,7 +15,7 @@ function Login({ onHandleLogin }) {
                     return user.password === password && user.username === username
             })
 
-            foundUser ? onHandleLogin(foundUser) : alert('Ick')
+            foundUser ? onHandleLogin(foundUser) : alert('user not found')
         })
     }
 

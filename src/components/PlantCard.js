@@ -2,8 +2,6 @@ import React from "react";
 
 function PlantCard({ plantName, plantImage, plantDescription, onDeletePlant, id}) {
 
-    console.log(plantName)
-
     function handleDeleteClick(){
         fetch(`http://localhost:9292/plants/${id}`, {
             method: "DELETE",

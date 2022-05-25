@@ -24,6 +24,7 @@ function App() {
     }
 
     function handleAddPlant(newPlantData) {
+        console.log(user)
         setPlantData([...plantData, newPlantData])
     }
 
@@ -41,8 +42,11 @@ function App() {
             <h1>Plant Pals</h1>
             {loggedIn ? (
                 <>
+                    <h2>Welcome back {user.name}!</h2>
                      <button onClick={handleLogoutClick}>logout</button>
-                    <PlantForm onAddPlant={handleAddPlant}/>
+                    <PlantForm
+                        user={user}
+                        onAddPlant={handleAddPlant}/>
                     <PlantPage 
                         plants={plantData}
                         onDeletePlant={handleDeletePlant}
