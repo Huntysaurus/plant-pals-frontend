@@ -11,6 +11,9 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(false)
     const [user, setUser] = useState(false)
 
+    const userPlants = plantData.filter(plant => plant.user_id === user.id)
+    console.log(userPlants)
+
     useEffect(() => {
         fetch("http://localhost:9292/plants")
         .then((r) => r.json())

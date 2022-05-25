@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
     return (
-        <h2>Welcome Back!</h2>
+        <h2>time to post some plants!</h2>
     )
 }
 
