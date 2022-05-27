@@ -28,8 +28,10 @@ function PlantPage({
                             plantName={plant.name}
                             plantImage={plant.image}
                             plantDescription={plant.description}
+                            plantLight={plant.light_preference}
+                            plantCare={plant.care_difficulty}
+                            plantAge={plant.age}
                             onDeletePlant={onDeletePlant}
-                            // onUpdatePlant={onUpdatePlant}
                             />
                         )
                     }
