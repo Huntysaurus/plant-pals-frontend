@@ -4,11 +4,9 @@ import PlantCard from "./PlantCard";
 function PlantPage({
     plants,
     onDeletePlant,
+    onUpdatePlant,
     user
 }) {
-
-    console.log(user.plants)
-    
 
     return (
         <>
@@ -35,6 +33,7 @@ function PlantPage({
                             plantAge={plant.age}
                             plantOwner={plant.user_id}
                             onDeletePlant={onDeletePlant}
+                            onUpdatePlant={onUpdatePlant}
                             />
                         )
                     }

@@ -12,7 +12,6 @@ function App() {
     const [user, setUser] = useState(false)
 
     const userPlants = plantData.filter(plant => plant.user_id === user.id)
-    console.log(userPlants)
 
     useEffect(() => {
         fetch("http://localhost:9292/plants")
@@ -29,6 +28,12 @@ function App() {
     function handleAddPlant(newPlantData) {
         console.log(user)
         setPlantData([...plantData, newPlantData])
+    }
+
+    function handleUpdatePlant(updatedPlant) {
+        console.log(updatedPlant)
+        const updatedPlants = plantData.map(plant => plant.id === updatedPlant.id ? updatedPlant : plant)
+        setPlantData(updatedPlants)
     }
 
     function handleDeletePlant(id) {
@@ -54,6 +59,7 @@ function App() {
                         user={user}
                         plants={plantData}
                         onDeletePlant={handleDeletePlant}
+                        onUpdatePlant={handleUpdatePlant}
                     />
                 </>
             ) : (
