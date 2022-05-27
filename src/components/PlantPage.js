@@ -33,6 +33,7 @@ function PlantPage({
                             plantLight={plant.light_preference}
                             plantCare={plant.care_difficulty}
                             plantAge={plant.age}
+                            plantOwner={plant.user_id}
                             onDeletePlant={onDeletePlant}
                             />
                         )

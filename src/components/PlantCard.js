@@ -2,8 +2,9 @@ import React from "react";
 import { useState } from "react";
 import EditPlant from "./EditPlant";
 
-function PlantCard({ user, plantName, plantImage, plantDescription, plantLight, plantCare, plantAge, onDeletePlant, id}) {
+function PlantCard({ user,plantOwner, plantName, plantImage, plantDescription, plantLight, plantCare, plantAge, onDeletePlant, id}) {
     const [isEditing, setIsEditing] = useState(false)
+
 
     function handleDeleteClick(){
         fetch(`http://localhost:9292/plants/${id}`, {
@@ -33,11 +34,11 @@ function PlantCard({ user, plantName, plantImage, plantDescription, plantLight, 
             </div>
             )}
 
-            {
+            {plantOwner === user.id ? (
             <div style={{marginLeft:"25%", marginRight:"auto", marginBottom:"5%"}}>
                 <button onClick={handleDeleteClick}>delete plant</button>
                 <button onClick={handleUpdatePlant}>update</button>
-            </div>
+            </div>) : ( null)
             }
         </>
     )
