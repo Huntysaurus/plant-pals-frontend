@@ -51,6 +51,7 @@ function App() {
                         user={user}
                         onAddPlant={handleAddPlant}/>
                     <PlantPage 
+                        user={user}
                         plants={plantData}
                         onDeletePlant={handleDeletePlant}
                     />

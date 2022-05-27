@@ -3,8 +3,11 @@ import PlantCard from "./PlantCard";
 
 function PlantPage({
     plants,
-    onDeletePlant
+    onDeletePlant,
+    user
 }) {
+
+    console.log(user.plants)
 
     return (
         <>

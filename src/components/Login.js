@@ -10,7 +10,6 @@ function Login({ onHandleLogin }) {
         fetch("http://localhost:9292/users")
         .then((r) => r.json())
         .then(users => {
-            console.log(users)
             const foundUser = users.find((user) => {
                     return user.password === password && user.username === username
             })
