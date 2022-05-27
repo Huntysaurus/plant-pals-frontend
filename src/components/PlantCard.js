@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
+import EditPlant from "./EditPlant";
 
 function PlantCard({ plantName, plantImage, plantDescription, onDeletePlant, id}) {
+    const [isEditing, setIsEditing] = useState(false)
 
     function handleDeleteClick(){
         fetch(`http://localhost:9292/plants/${id}`, {
@@ -9,13 +12,22 @@ function PlantCard({ plantName, plantImage, plantDescription, onDeletePlant, id}
         onDeletePlant(id)
     }
 
+    function handleUpdatePlant(){
+        setIsEditing(true)
+    }
+
     return (
-        <>
-            <h3>{plantName}</h3>
-            <img src={plantImage}/>
-            <p>{plantDescription}</p>
-            <button onClick={handleDeleteClick}>delete plant</button>
-            <button>update</button>
+        <>{isEditing ? (
+            <EditPlant/>
+        ) : (
+            <>
+                <h3>{plantName}</h3>
+                <img src={plantImage}/>
+                <p>{plantDescription}</p>
+                <button onClick={handleDeleteClick}>delete plant</button>
+                <button onClick={handleUpdatePlant}>update</button>
+            </>
+        )}
         </>
     )
 
