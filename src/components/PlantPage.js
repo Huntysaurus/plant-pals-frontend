@@ -8,6 +8,7 @@ function PlantPage({
 }) {
 
     console.log(user.plants)
+    
 
     return (
         <>
@@ -23,6 +24,7 @@ function PlantPage({
                     {plants.map((plant) => {
                         return (
                             <PlantCard
+                            user={user}
                             key={plant.id}
                             id={plant.id}
                             plantName={plant.name}
