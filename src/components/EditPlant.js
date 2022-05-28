@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 
-function EditPlant({ plantImage, plantName, id, plantDescription, onUpdatePlant}) {
-
-    console.log(id)
+function EditPlant({ plantImage, plantName, id, onUpdatePlant}) {
 
     const [newImage, setNewImage] = useState('')
     const [newDesc, setNewDesc] = useState('')
     const [newAge, setNewAge] = useState('')
 
     function handleUpdateSubmit(e) {
-        e.preventDefault()
+      e.preventDefault()
+
+      console.log({"image": newImage, "description": newDesc, "age": newAge})
         fetch(`http://localhost:9292/plants/${id}`, {
             method: "PATCH",
             headers: {
-                "Content-Type" : "application/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                plantImage: newImage,
-                plantDescription: newDesc,
-                age: newAge
+                "image": newImage,
+                "description": newDesc,
+                "age": newAge
             }),
         })
             .then((r) => r.json())
