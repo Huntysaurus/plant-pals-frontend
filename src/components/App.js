@@ -16,7 +16,7 @@ function App() {
     useEffect(() => {
         fetch("http://localhost:9292/plants")
         .then((r) => r.json())
-        .then(data => setPlantData(data))
+        .then(plants => setPlantData(plants))
     }, [])
 
     function handleUserLogin(userData) {

@@ -9,8 +9,6 @@ function PlantForm({ onAddPlant, user }) {
     const [plantLight, setPlantLight] = useState('direct sunlight')
     const [plantCare, setPlantCare] = useState('beginner friendly')
     const [plantAge, setPlantAge] = useState(0)
-    const [plantHealth, setPlantHealth] = useState('')
-    const [plantAlive, setPlantAlive] = useState('yes')
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -27,8 +25,6 @@ function PlantForm({ onAddPlant, user }) {
                 light_preference: plantLight,
                 care_difficulty: plantCare,
                 age: plantAge,
-                health: plantHealth,
-                still_alive: plantAlive,
                 user_id: user.id
             }),
         })
@@ -41,8 +37,6 @@ function PlantForm({ onAddPlant, user }) {
             setPlantLight('direct sunlight')
             setPlantCare('beginner friendly')
             setPlantAge(0)
-            setPlantHealth('')
-            setPlantAlive('yes')
         })
     }
 
@@ -80,6 +74,7 @@ function PlantForm({ onAddPlant, user }) {
                 <label>
                     Plant Age:
                     <input
+                        type='number'
                         placeholder='how old is your plant?'
                         value={plantAge}
                         onChange={(e)=> setPlantAge(e.target.value)}
@@ -110,27 +105,6 @@ function PlantForm({ onAddPlant, user }) {
                         <option value="beginner friendly">beginner friendly</option>
                         <option value="advanced care">advanced care</option>
                         <option value="quite finicky">quite finicky</option>
-                    </select>
-                </label>
-                <br></br>
-                <label>
-                    Plant Health:
-                    <input
-                        placeholder='How is your plant doing?'
-                        value={plantHealth}
-                        onChange={(e)=>setPlantHealth(e.target.value)}
-                    />
-                </label>
-                <br></br>
-                <label>
-                    Still Alive?
-                    <select
-                        placeholder='still alive?'
-                        value={plantAlive}
-                        onChange={(e)=> setPlantAlive(e.target.value)}
-                    >
-                        <option value="yes">yes</option>
-                        <option value="no">no</option>
                     </select>
                 </label>
                 <br></br>

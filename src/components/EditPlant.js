@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function EditPlant({ plantImage, plantName, id, onUpdatePlant}) {
+function EditPlant({ plantImage, plantDescription, plantAge, plantName, id, onUpdatePlant}) {
 
     const [newImage, setNewImage] = useState('')
     const [newDesc, setNewDesc] = useState('')
-    const [newAge, setNewAge] = useState('')
+    const [newAge, setNewAge] = useState(0)
 
     function handleUpdateSubmit(e) {
       e.preventDefault()
@@ -16,9 +16,9 @@ function EditPlant({ plantImage, plantName, id, onUpdatePlant}) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                "image": newImage,
-                "description": newDesc,
-                "age": newAge
+                "image": newImage === "" ? plantImage : newImage,
+                "description": newDesc === "" ? plantDescription : newDesc,
+                "age": newAge === 0 ? plantAge : newAge
             }),
         })
             .then((r) => r.json())
@@ -32,7 +32,7 @@ function EditPlant({ plantImage, plantName, id, onUpdatePlant}) {
             <label>
                     New Plant Picture:
                     <input
-                        placeholder='new plant photo'
+                        placeholder={plantImage}
                         value={newImage}
                         onChange={(e)=>setNewImage(e.target.value)}
                     />
@@ -41,7 +41,7 @@ function EditPlant({ plantImage, plantName, id, onUpdatePlant}) {
                 <label>
                    New Plant Description:
                     <input
-                        placeholder='change the info'
+                        placeholder={plantDescription}
                         value={newDesc}
                         onChange={(e)=> setNewDesc(e.target.value)}
                     />
@@ -50,7 +50,8 @@ function EditPlant({ plantImage, plantName, id, onUpdatePlant}) {
                 <label>
                    New Plant Age:
                     <input
-                        placeholder='how old is your plant now?'
+                        type='number'
+                        placeholder={plantAge}
                         value={newAge}
                         onChange={(e)=> setNewAge(e.target.value)}
                     />
