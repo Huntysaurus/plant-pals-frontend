@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import UserForm from "./UserForm";
 
-function Login({ onHandleLogin }) {
+function Login({ onHandleLogin, onCreateUser }) {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -20,6 +21,8 @@ function Login({ onHandleLogin }) {
 
     return (
         <>
+        <br></br>
+            <h2>Login Here!</h2>
             <form onSubmit={handleLogin}>
                 <label>
                     username:
@@ -41,6 +44,9 @@ function Login({ onHandleLogin }) {
                 <br></br>
                 <button type="submit">login</button>
             </form>
+            <br></br>
+            <br></br>
+            <UserForm onCreateUser={onCreateUser}/>
         </>
     )
 }

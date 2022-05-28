@@ -12,7 +12,6 @@ function PlantForm({ onAddPlant, user }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-
         fetch("http://localhost:9292/plants" , {
             method: "POST",
             headers: {

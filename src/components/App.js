@@ -19,6 +19,10 @@ function App() {
         .then(plants => setPlantData(plants))
     }, [])
 
+    function handleCreateUser(newUser){
+        console.log(newUser)
+    }
+
     function handleUserLogin(userData) {
         setUser(userData)
         setLoggedIn(true)
@@ -65,7 +69,7 @@ function App() {
             ) : (
                 <>
                     <Home/>
-                    <Login onHandleLogin={handleUserLogin}/>
+                    <Login onCreateUser={handleCreateUser} onHandleLogin={handleUserLogin}/>
                 </>
             )}
         </>
