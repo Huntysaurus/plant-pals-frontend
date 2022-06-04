@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function UserForm({ onCreateUser }) {
+function UserForm({ onCreateUser, allUsers }) {
 
     const [name, setName] = useState('')
     const [username, setUsername] = useState('')
@@ -9,10 +9,16 @@ function UserForm({ onCreateUser }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        fetch("http://localhost:9292/users", {
+        const sameUser = allUsers.find((user) => {
+            return user.username === username
+        })
+        if (sameUser) {
+            alert('username already exists')
+        } else {
+            fetch("http://localhost:9292/users", {
             method: "POST",
             headers: {
-                "content-type": "application/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
                 name: name,
@@ -22,6 +28,7 @@ function UserForm({ onCreateUser }) {
         })
         .then((r)=> r.json())
         .then((newUser) => onCreateUser(newUser))
+        }
     }
 
     return (
