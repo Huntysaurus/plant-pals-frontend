@@ -15,4 +15,3 @@ function User({ people }) {
 }
 
 export default User
-
