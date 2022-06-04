@@ -1,72 +1,26 @@
-# Getting Started with Create React App
+## Plant Pals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front-end created with Node.js and React
 
-## Available Scripts
+## The idea behind Plant Pals
 
-In the project directory, you can run:
+Plant pals is a basic CRUD application which uses a Ruby backend alongside the Sinatra and Active Record ruby gems. Data is stored on the backend using SQL tables. The link to the backend can be found here, https://github.com/Huntysaurus/phase-3-sinatra-react-project.
 
-### `npm start`
+Plant Pals allows users to share photos and information on their plants with other users for knowledge and entertainment purpses. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Plant Pals uses a one-to-many relationship on its backend with a User and Plant class where a single user can have many plants. Users can be created using a Name, Username and Password which will perform a POST request for the User class, creating a new instance of User. To prevent duplication, users can not have the same username. Users can also log in using an existing username and password, performing a GET request on users and obtaining a specific User class instance.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once logged in or created, a user will be taken to a public page where a GET request is performed for all Plant class instances created by users and then be appended on the DOM as individual plant cards. Plant cards contain information from the plant class including: a name, image, description, light_preference, care_difficulty, and age. Users can fill out a form at the top of the page to perform a POST request for a new plant, creating a new instance of the Plant class, which will immediately appear on the DOM and have a user_id of that specific user on the SQL backend. Users also have the ability to perform a PATCH and DELETE request using the edit and delete buttons under plants that are owned by that specific user.
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the front-end, simply install using npm:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# phase-3-frontend
-# phase-3-frontend
+```
+$ npm install
+```
+To run the application in the browser:
+```
+$ npm start
+```
+clone the backend onto your local environment to use in-tandem with the front-end. The backend comes pre-loaded with seed data that can be manipulated as well.
