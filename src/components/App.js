@@ -10,13 +10,18 @@ function App() {
     const [plantData, setPlantData] = useState([])
     const [loggedIn, setLoggedIn] = useState(false)
     const [user, setUser] = useState(false)
-
-    const userPlants = plantData.filter(plant => plant.user_id === user.id)
+    const [allUsers, setAllUsers] = useState([])
 
     useEffect(() => {
         fetch("http://localhost:9292/plants")
         .then((r) => r.json())
         .then(plants => setPlantData(plants))
+    }, [])
+
+    useEffect(() => {
+        fetch("http://localhost:9292/users")
+        .then((r) => r.json())
+        .then(users => setAllUsers(users))
     }, [])
 
     function handleCreateUser(newUser){
@@ -69,7 +74,11 @@ function App() {
             ) : (
                 <>
                     <Home/>
-                    <Login onCreateUser={handleCreateUser} onHandleLogin={handleUserLogin}/>
+                    <Login
+                        onCreateUser={handleUserLogin}
+                        onHandleLogin={handleUserLogin}
+                        allUsers={allUsers}
+                    />
                 </>
             )}
         </>
