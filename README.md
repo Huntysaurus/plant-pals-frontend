@@ -4,7 +4,7 @@ Front-end created with Node.js and React
 
 ## The idea behind Plant Pals
 
-Plant pals is a basic CRUD application which uses a Ruby backend alongside the Sinatra and Active Record ruby gems. Data is stored on the backend using SQL tables. The link to the backend can be found here, https://github.com/Huntysaurus/phase-3-sinatra-react-project.
+Plant Pals is a basic CRUD application which uses a Ruby backend alongside the Sinatra and Active Record ruby gems. Data is stored on the backend using SQL tables. The link to the backend can be found here, https://github.com/Huntysaurus/phase-3-sinatra-react-project.
 
 Plant Pals allows users to share photos and information on their plants with other users for knowledge and entertainment purpses. 
 
