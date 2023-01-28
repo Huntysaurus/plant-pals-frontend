@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UserForm from "./UserForm";
+import styles from "../appStyles.module.css";
 
 function Login({ onHandleLogin, onCreateUser, allUsers }) {
 
@@ -20,9 +21,9 @@ function Login({ onHandleLogin, onCreateUser, allUsers }) {
     }
 
     return (
-        <>
+        <div className={styles.login_container}>
         <br></br>
-            <h2>Login Here!</h2>
+            <h2 className={styles.login_heading}>Login Here!</h2>
             <form onSubmit={handleLogin}>
                 <label>
                     username:
@@ -50,7 +51,7 @@ function Login({ onHandleLogin, onCreateUser, allUsers }) {
                 onCreateUser={onCreateUser}
                 allUsers={allUsers}
             />
-        </>
+        </div>
     )
 }
 

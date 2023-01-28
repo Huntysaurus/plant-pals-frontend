@@ -1,5 +1,6 @@
 import React from "react";
 import PlantCard from "./PlantCard";
+import styles from "../appStyles.module.css";
 
 function PlantPage({
     plants,
@@ -10,8 +11,7 @@ function PlantPage({
 
     
     return (
-        <>
-            <div>
+            <div className={styles.plant_page}>
                 <ul>
                     {plants.map((plant) => {
                         return (
@@ -34,7 +34,6 @@ function PlantPage({
                     )}
                 </ul>
             </div>
-        </>
     )
 
 }

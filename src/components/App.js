@@ -59,9 +59,9 @@ function App() {
         <div className={styles.page_back}>
             <h1 className={styles.heading}>Plant Pals</h1>
             {loggedIn ? (
-                <div>
-                    <h2>Welcome back {user.name}!</h2>
-                     <button onClick={handleLogoutClick}>logout</button>
+                <div className={styles.page_back_logged_in}>
+                    <h2 className={styles.welcome_back_text} >Welcome back {user.name}!</h2>
+                     <button className={styles.logout_button} onClick={handleLogoutClick}>logout</button>
                     <PlantForm
                         user={user}
                         onAddPlant={handleAddPlant}/>
@@ -73,14 +73,14 @@ function App() {
                     />
                 </div>
             ) : (
-                <>
+                <div className={styles.home_page_container}>
                     <Home/>
                     <Login
                         onCreateUser={handleUserLogin}
                         onHandleLogin={handleUserLogin}
                         allUsers={allUsers}
                     />
-                </>
+                </div>
             )}
         </div>
     )

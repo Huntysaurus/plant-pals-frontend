@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import styles from "../appStyles.module.css";
 
 function UserForm({ onCreateUser, allUsers }) {
 
@@ -33,7 +34,7 @@ function UserForm({ onCreateUser, allUsers }) {
 
     return (
         <>
-            <h2>No Account? Create one!</h2>
+            <h2 className={styles.login_heading}>No Account? Create one!</h2>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:

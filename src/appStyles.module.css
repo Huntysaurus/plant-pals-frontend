@@ -1,3 +1,74 @@
+label {
+    font-size: 25px;
+    color: rgb(91, 1, 1);
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 10%;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 4px 4px 4px rgb(97, 97, 97);
+    text-align: center;
+}
+
+select {
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: 0;
+    padding: 3px;
+    box-shadow: 4px 4px 4px rgb(97, 97, 97);
+    text-align: center;
+}
+
+button:not(.logout_button) {
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logout_button {
+    position: fixed;
+    margin-left: 2%;
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.heading {
+    font-size: 60px;
+    color: rgb(122, 32, 32);
+    margin-left: 1%;
+    background-color: rgba(166, 231, 209, 0.792);
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 50px;
+}
+
+.login_heading {
+    margin-top: 0;
+    font-size: 40px;
+    color: rgb(122, 32, 32);
+    text-align: center;
+}
+
 .page_back {
     background-color: rgb(203, 255, 239);
     background-image: url('https://media.istockphoto.com/id/1166491297/vector/collage-contemporary-floral-seamless-pattern-modern-exotic-jungle-fruits-and-plants.jpg?s=612x612&w=0&k=20&c=zwjhArTyUKP4F4itieQNmmk1UA-0m7ZM5dLTqgC9Spk=');
@@ -8,13 +79,63 @@
     left: 0%;
 }
 
-.heading {
-    font-size: 60px;
-    color: rgb(122, 32, 32);
-    margin-left: 10%;
+.page_back_logged_in {
+    position: relative;
+    top: -3%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.home_text {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -350%);
+    color: rgb(255, 110, 110);
+    font-size: 45px;
+    background-color: rgba(240, 248, 255, 0.644);
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.home_page_container {
+    position: relative;
+    margin-top: 10%;
+}
+
+.login_container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -15%);
     background-color: rgb(166, 231, 209);
-    width: 20%;
-    text-align: center;
-    padding: 5px;
+    padding: 50px;
     border-radius: 50px;
+}
+
+.welcome_back_text {
+    position: absolute;
+    left: 22%;
+    top: -2.35em;
+    font-size: 60px;
+    background-color: rgba(127, 255, 212, 0.511);
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.plant_form {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    background-color: rgb(166, 231, 209);
+    padding: 40px;
+    border-radius: 40px;
+
+}
+
+.plant_page {
+    position: absolute;
+    left: 30%;
+    top: 2000%;
 }

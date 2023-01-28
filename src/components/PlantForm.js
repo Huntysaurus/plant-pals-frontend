@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import styles from "../appStyles.module.css";
 
 function PlantForm({ onAddPlant, user }) {
 
@@ -41,7 +42,7 @@ function PlantForm({ onAddPlant, user }) {
     }
 
     return (
-        <>
+        <div className={styles.plant_form}>
             <h2>Add Your Plant to the List!</h2>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -111,7 +112,7 @@ function PlantForm({ onAddPlant, user }) {
                 <button type="submit">Add Plant!</button>
             </form>
 
-        </>
+        </div>
     )
 }
 
