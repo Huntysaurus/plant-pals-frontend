@@ -26,7 +26,7 @@ $ npm start
 clone the backend onto your local environment to use in-tandem with the front-end. The backend comes pre-loaded with seed data that can be manipulated as well.
 
 ## History
-0.1 (2022-05-29) - Fully functional MVP
+0.1 (2022-05-29) - functional MVP
 0.2 (2023-01-28) - Fully styled client  
 
 ## source material
