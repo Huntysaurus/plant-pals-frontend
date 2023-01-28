@@ -1,0 +1,20 @@
+.page_back {
+    background-color: rgb(203, 255, 239);
+    background-image: url('https://media.istockphoto.com/id/1166491297/vector/collage-contemporary-floral-seamless-pattern-modern-exotic-jungle-fruits-and-plants.jpg?s=612x612&w=0&k=20&c=zwjhArTyUKP4F4itieQNmmk1UA-0m7ZM5dLTqgC9Spk=');
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.heading {
+    font-size: 60px;
+    color: rgb(122, 32, 32);
+    margin-left: 10%;
+    background-color: rgb(166, 231, 209);
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50px;
+}

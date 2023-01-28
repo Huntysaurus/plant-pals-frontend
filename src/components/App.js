@@ -3,6 +3,7 @@ import PlantPage from "./PlantPage";
 import PlantForm from "./PlantForm";
 import Home from "./Home";
 import Login from "./Login";
+import styles from "../appStyles.module.css";
 
 
 function App() {
@@ -55,10 +56,10 @@ function App() {
         setLoggedIn(false)
     }
     return (
-        <>
-            <h1>Plant Pals</h1>
+        <div className={styles.page_back}>
+            <h1 className={styles.heading}>Plant Pals</h1>
             {loggedIn ? (
-                <>
+                <div>
                     <h2>Welcome back {user.name}!</h2>
                      <button onClick={handleLogoutClick}>logout</button>
                     <PlantForm
@@ -70,7 +71,7 @@ function App() {
                         onDeletePlant={handleDeletePlant}
                         onUpdatePlant={handleUpdatePlant}
                     />
-                </>
+                </div>
             ) : (
                 <>
                     <Home/>
@@ -81,7 +82,7 @@ function App() {
                     />
                 </>
             )}
-        </>
+        </div>
     )
 }
 

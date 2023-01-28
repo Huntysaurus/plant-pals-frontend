@@ -24,3 +24,7 @@ To run the application in the browser:
 $ npm start
 ```
 clone the backend onto your local environment to use in-tandem with the front-end. The backend comes pre-loaded with seed data that can be manipulated as well.
+
+## source material
+
+backdrop collage of plants from https://www.istockphoto.com/
