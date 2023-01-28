@@ -43,10 +43,10 @@ function PlantForm({ onAddPlant, user }) {
 
     return (
         <div className={styles.plant_form}>
-            <h2>Add Your Plant to the List!</h2>
+            <h2 className={styles.plant_form_heading}>add your plant to the list!</h2>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Plant Picture:
+                    Plant Picture
                     <input
                         placeholder='link your plant photo'
                         value={plantImage}
@@ -55,7 +55,7 @@ function PlantForm({ onAddPlant, user }) {
                 </label>
                 <br></br>
                 <label>
-                    Plant Variety:
+                    Plant Variety
                     <input
                         placeholder='what type of plant is it?'
                         value={plantName}
@@ -64,8 +64,8 @@ function PlantForm({ onAddPlant, user }) {
                 </label>
                 <br></br>
                 <label>
-                    Plant Description:
-                    <input
+                    Plant Description
+                    <textarea
                         placeholder='tell us about your plant!'
                         value={plantDescription}
                         onChange={(e)=> setPlantDescription(e.target.value)}
@@ -73,7 +73,7 @@ function PlantForm({ onAddPlant, user }) {
                 </label>
                 <br></br>
                 <label>
-                    Plant Age:
+                    Plant Age
                     <input
                         type='number'
                         placeholder='how old is your plant?'
@@ -83,7 +83,7 @@ function PlantForm({ onAddPlant, user }) {
                 </label>
                 <br></br>
                 <label>
-                    Light Preference:
+                    Light Preference
                     <select
                         placeholder='plant light preference'
                         value={plantLight}
@@ -97,7 +97,7 @@ function PlantForm({ onAddPlant, user }) {
                 </label>
                 <br></br>
                 <label>
-                    Care Difficulty:
+                    Care Difficulty
                     <select
                         placeholder='care difficulty'
                         value={plantCare}

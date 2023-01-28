@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../appStyles.module.css";
 
 function EditPlant({ plantImage, plantDescription, plantAge, plantName, id, onUpdatePlant}) {
 
@@ -26,9 +27,9 @@ function EditPlant({ plantImage, plantDescription, plantAge, plantName, id, onUp
     }
 
     return (
-        <>
-        <img style={{marginLeft:"25%", marginRight:"auto", marginBottom:"1%"}} src={plantImage} alt={plantName}></img>
-        <form onSubmit={handleUpdateSubmit} style={{marginLeft:"25%", marginRight:"auto", marginBottom:"1%"}}>
+        <div className={styles.edit_plant_div}>
+        <img className={styles.plant_image} src={plantImage} alt={plantName}></img>
+        <form onSubmit={handleUpdateSubmit} >
             <label>
                     New Plant Picture:
                     <input
@@ -40,7 +41,7 @@ function EditPlant({ plantImage, plantDescription, plantAge, plantName, id, onUp
                 <br></br>
                 <label>
                    New Plant Description:
-                    <input
+                    <textarea
                         placeholder={plantDescription}
                         value={newDesc}
                         onChange={(e)=> setNewDesc(e.target.value)}
@@ -57,9 +58,9 @@ function EditPlant({ plantImage, plantDescription, plantAge, plantName, id, onUp
                     />
                 </label>
                 <br></br>
-                <button type="submit" value="update">Update Plant</button>
+                <button className={styles.confirm_button} type="submit" value="update">Confirm Changes</button>
         </form>
-        </>
+        </div>
 
     )
 

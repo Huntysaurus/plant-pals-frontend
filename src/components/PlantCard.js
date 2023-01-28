@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import EditPlant from "./EditPlant";
+import styles from "../appStyles.module.css";
 
 function PlantCard({ user, plantOwner, plantName, plantImage, plantDescription, plantLight, plantCare, plantAge, onDeletePlant, id, onUpdatePlant}) {
     const [isEditing, setIsEditing] = useState(false)
@@ -27,7 +28,7 @@ function PlantCard({ user, plantOwner, plantName, plantImage, plantDescription, 
     }
 
     return (
-        <>
+        <div className={styles.plant_card}>
             {isEditing ? (
                 <EditPlant
                 plantImage={plantImage}
@@ -38,26 +39,27 @@ function PlantCard({ user, plantOwner, plantName, plantImage, plantDescription, 
                 onUpdatePlant={handleUpdatePlant}
                 />
             ) : (
-                <div style={{marginLeft:"25%", marginRight:"auto", marginBottom:"1%"}}>
+                <div>
                     <h2>{plantName}</h2>
-                    <img style={{width:"20rem"}} src={plantImage} alt={plantName}/>
-                    <h3>{plantDescription}</h3>
-                    <ul>
-                    <li>{plantLight}</li>
-                    <li>{plantCare}</li>
-                    <li>Age: {plantAge}</li>
-                    </ul>
-
+                    <img className={styles.plant_image} src={plantImage} alt={plantName}/>
+                    <h3 className={styles.plant_description} >{plantDescription}</h3>
+                    <div className={styles.plant_traits}>
+                        <ul>
+                        <li>{plantLight}</li>
+                        <li>{plantCare}</li>
+                        <li>Age: {plantAge}</li>
+                        </ul>
+                    </div>
                 </div>
                 )}
 
                 {plantOwner === user.id ? (
-                <div style={{marginLeft:"25%", marginRight:"auto", marginBottom:"5%"}}>
-                    <button onClick={handleDeleteClick}>delete plant</button>
-                    <button onClick={handleUpdateClick}>{updateButton ? 'Cancel' : 'Update'}</button>
+                <div className={styles.update_delete_div}>
+                    <button className={styles.edit_plant_buttons} onClick={handleDeleteClick}>Delete Plant</button>
+                    <button className={styles.edit_plant_buttons} onClick={handleUpdateClick}>{updateButton ? 'Cancel' : 'Update'}</button>
                 </div>) : ( null)
             }
-        </>
+        </div>
     )
 
 }

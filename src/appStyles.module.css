@@ -25,7 +25,13 @@ select {
     text-align: center;
 }
 
-button:not(.logout_button) {
+textarea {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 4px 4px 4px rgb(97, 97, 97);
+}
+
+button:not(.logout_button, .edit_plant_buttons, .confirm_button) {
     padding: 10px;
     border: 0;
     border-radius: 20px;
@@ -37,9 +43,23 @@ button:not(.logout_button) {
     letter-spacing: 1px;
 }
 
+.edit_plant_buttons {
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
 .logout_button {
     position: fixed;
     margin-left: 2%;
+    top: 3%;
     padding: 10px;
     border: 0;
     border-radius: 20px;
@@ -48,12 +68,27 @@ button:not(.logout_button) {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
+    z-index: 100;
+}
+
+.confirm_button {
+    padding: 10px;
+    background-color: aquamarine;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 .heading {
     font-size: 60px;
     color: rgb(122, 32, 32);
-    margin-left: 1%;
+    margin-left: 8%;
     background-color: rgba(166, 231, 209, 0.792);
     width: 20%;
     text-align: center;
@@ -116,7 +151,7 @@ button:not(.logout_button) {
 
 .welcome_back_text {
     position: absolute;
-    left: 22%;
+    left: 30%;
     top: -2.35em;
     font-size: 60px;
     background-color: rgba(127, 255, 212, 0.511);
@@ -125,17 +160,61 @@ button:not(.logout_button) {
 }
 
 .plant_form {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 15%);
+    position: fixed;
+    left: 80%;
+    transform: translate(-50%, -10%);
     background-color: rgb(166, 231, 209);
     padding: 40px;
     border-radius: 40px;
+    z-index: 100;
+}
 
+.plant_form_heading {
+    background-color: rgb(101, 198, 166);
+    padding: 3px;
+    text-align: center;
+    border-radius: 15px;
 }
 
 .plant_page {
+    background-color: rgb(255, 206, 143);
+    width: 100%;
     position: absolute;
-    left: 30%;
-    top: 2000%;
+    top: 100%;
 }
+
+.plant_card {
+    width: 30%;
+    margin: auto;
+    background-color: rgb(240, 166, 124);
+    padding: 15px;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.plant_image {
+    width: 30rem;
+    border-radius: 20px;
+}
+
+.plant_description {
+    background-color: rgb(166, 231, 209);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.plant_traits {
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.update_delete_div {
+    padding: 15px;
+}
+
+/* .edit_plant_div {
+
+} */
