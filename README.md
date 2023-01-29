@@ -36,16 +36,16 @@ clone the backend onto your local environment to use in-tandem with the front-en
 
 ## Usage Examples
 
-![home screen](https://github.com/Huntysaurus/stratify-app/blob/main/images/plant%20pals%20home.png)
+![home screen](https://github.com/Huntysaurus/plant-pals-frontend/blob/main/images/plant%20pals%20home.png)
 
 The app launches at the home screen where a user has the ability to either log in or sign up. In order to sign up a user provides a name, username and password.
 * The only validation is that usernames be unique
 
-![plant page](https://github.com/Huntysaurus/stratify-app/blob/main/images/plant%20page.png)
+![plant page](https://github.com/Huntysaurus/plant-pals-frontend/blob/main/images/plant%20page.png)
 
 Once logged in, users are taken to the plant page, where they can view every plant that has been uploaded by users. Users have the ability to log back out by clicking the log out button in the upper left-hand corner. This button will follow the user as they scroll through the page.
 
-![plant card](https://github.com/Huntysaurus/stratify-app/blob/main/images/plant%20card.png)
+![plant card](https://github.com/Huntysaurus/plant-pals-frontend/blob/main/images/plant%20card.png)
 
 Individual plant cards contain the following attributes:
 * name
@@ -59,17 +59,17 @@ Individual plant cards contain the following attributes:
 When running the seed data, several plants are created using these attributes. Feel free to manipulate the seed data as you wish. Keep in mind that certain attributes can not be created by the user from a UI standpoint, such as care_difficulty and light_preference and will only be filled in by an HTML select element, and used as an option when creating new plants.
 * this can of course be changed by changing information in the select elements located in the EditPlant and PlantForm components
 
-![create plant](https://github.com/Huntysaurus/stratify-app/blob/main/images/create%20plant.png)
+![create plant](https://github.com/Huntysaurus/plant-pals-frontend/blob/main/images/create%20plant.png)
 
 The create plant form, which will follow the user as they scroll through the plants page, is used to create new plants. For the image to show properly, a public link to the image must be used. The change will show on the DOM immediately after being created.
 * plants on the page are shown in the order that they are created
 
-![plant card owner](https://github.com/Huntysaurus/stratify-app/blob/main/images/plant%20card%20owner.png)
+![plant card owner](https://github.com/Huntysaurus/plant-pals-frontend/blob/main/images/plant%20card%20owner.png)
 
 The user has additional options for plants on the page that belong to them, including delete and update. 
 * clicking delete on a plant will immediately destroy the plant and update the changes without warning
 
-![update plant](https://github.com/Huntysaurus/stratify-app/blob/main/images/plant%20card%20update.png)
+![update plant](https://github.com/Huntysaurus/plant-pals-frontend/blob/main/images/plant%20card%20update.png)
 
 Several form fields will appear when clicking the Update button, giving the user the option to update the image, description and age of the plant. Clicking the Confirm Changes button will append the changes and immediately show on the DOM.
 * clicking Cancel will return the plant to its original state, removing the additional form fields
