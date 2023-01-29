@@ -154,9 +154,8 @@ button:not(.logout_button, .edit_plant_buttons, .confirm_button) {
     left: 30%;
     top: -2.35em;
     font-size: 60px;
-    background-color: rgba(127, 255, 212, 0.511);
     padding: 8px;
-    border-radius: 50px;
+    color: rgb(105, 0, 0);
 }
 
 .plant_form {
@@ -191,6 +190,7 @@ button:not(.logout_button, .edit_plant_buttons, .confirm_button) {
     margin-bottom: 5%;
     text-align: center;
     border-radius: 30px;
+    box-shadow: 5px 5px 3px rgb(169, 140, 103);
 }
 
 .plant_image {
@@ -214,7 +214,3 @@ button:not(.logout_button, .edit_plant_buttons, .confirm_button) {
 .update_delete_div {
     padding: 15px;
 }
-
-/* .edit_plant_div {
-
-} */
