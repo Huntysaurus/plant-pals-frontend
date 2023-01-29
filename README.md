@@ -8,6 +8,8 @@ A plant-sharing app! Front-end created with Node.js and React.
 Plant Pals is a basic CRUD application which uses a Ruby backend alongside the Sinatra and Active Record. By running the separate back-end in tandem with the front-end, users have the ability to create, update and delete posts about their plants as well as see other users' posts about plants. 
 ___
 The link to the separate backend can be found here, https://github.com/Huntysaurus/phase-3-sinatra-react-project.
+
+Video walkthrough https://www.youtube.com/watch?v=eFUHwJDol74
 ___
 
 Plant Pals uses a one-to-many relationship on its backend with a User and Plant class where a single user can have many plants. Users can be created using a Name, Username and Password which will perform a POST request for the User class, creating a new instance of User. To prevent duplication, users can not have the same username.
